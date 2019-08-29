@@ -32,7 +32,7 @@ function check_all_input() {
     let all_inputs = document.getElementsByTagName('input');
     for (let i = 0; i < all_inputs.length; i++) {
         let input = all_inputs[i];
-        if(input.type ==="text"){
+        if (input.type === "text") {
             let inputs = input.parentElement.getElementsByTagName('input');
             let error = input.parentElement.previousElementSibling.getElementsByClassName("count")[0];
             error.innerHTML = 0;
@@ -61,12 +61,20 @@ function check_input() {
 
 function saveAsJson() {
     getData();
+    getCheckbox();
+    getRadio();
+    getTextarea();
+    getSelect();
     let blob = new Blob([JSON.stringify(prepareJson)], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "data.json");
 }
 
 function generateFile() {
     getData();
+    getCheckbox();
+    getRadio();
+    getTextarea();
+    getSelect();
     loadFile("template_document.docx", function (error, content) {
         if (error) {
             throw error
@@ -102,6 +110,54 @@ function loadFile(url, callback) {
     JSZipUtils.getBinaryContent(url, callback);
 }
 
+function getCheckbox() {
+    let inputs = document.getElementsByClassName('form_checkbox');
+    var r;
+    for (r = 0; r < inputs.length; r++) {
+        let form_value = '';
+        if (inputs[r].checked) {
+            form_value = ["yes"];
+        } else {
+            form_value = []
+        }
+        prepareJson[inputs[r].getAttribute('id')] = form_value;
+    }
+}
+
+function getTextarea() {
+    let inputs = document.getElementsByClassName('form_textarea');
+    var r;
+    for (r = 0; r < inputs.length; r++) {
+        let form_value = '';
+        form_value = [inputs[r].value];
+        prepareJson[inputs[r].getAttribute('id')] = form_value;
+    }
+}
+
+function getSelect() {
+    let inputs = document.getElementsByClassName('form_select');
+    var r;
+    for (r = 0; r < inputs.length; r++) {
+        let form_value = '';
+        form_value = [inputs[r].value];
+        prepareJson[inputs[r].getAttribute('id')] = form_value;
+    }
+}
+
+function getRadio() {
+    let inputs = document.getElementsByClassName('form_radio');
+    var r;
+    for (r = 0; r < inputs.length; r++) {
+        let form_value = '';
+        if (inputs[r].checked) {
+            form_value = ["yes"];
+        } else {
+            form_value = []
+        }
+        prepareJson[inputs[r].getAttribute('id')] = form_value;
+    }
+}
+
 function getData() {
     let inputs = document.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; i += 1) {
@@ -110,6 +166,7 @@ function getData() {
             case "organization_mentor":
                 form_value = document.querySelector('[name=mentor_gender]:checked').value + " " + inputs[i].value;
                 break;
+
             case "chi_req":
                 if (document.querySelector('[name=chi_req]:checked').value === "0") {
                     form_value = ["Fair"]
