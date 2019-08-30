@@ -186,6 +186,9 @@
                     Medical Information
                 </h5>
                 <div class="form-row">
+                    <div class="col-0.5">
+                        <input type="checkbox" class="form_checkbox" id="medical_1">
+                    </div>
                     <div class="col-2">
                         <label for="Medical_Allergies">Allergies</label>
                     </div>
@@ -197,6 +200,9 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <div class="col-0.5">
+                        <input type="checkbox" class="form_checkbox" id="medical_2">
+                    </div>
                     <div class="col-2">
                         <label for="Medical_Prescription_Drugs">Prescription Drugs</label>
                     </div>
@@ -208,6 +214,9 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <div class="col-0.5">
+                        <input type="checkbox" class="form_checkbox" id="medical_3">
+                    </div>
                     <div class="col-2">
                         <label for="Medical_Physical_Limitations">Physical Limitations</label>
                     </div>
@@ -219,6 +228,9 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <div class="col-0.5">
+                        <input type="checkbox" class="form_checkbox" id="medical_4">
+                    </div>
                     <div class="col-2">
                         <label for="Medical_Other">Other</label>
                     </div>
@@ -236,14 +248,11 @@
                 </h5>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="emergency_type">type</label>
+                        <label>Type</label>
                     </div>
-                    <div class="col">
-                        <select id="emergency_type" class="form-control form-control-sm form_select">
-                            <option>Parent</option>
-                            <option>Guardian</option>
-                        </select>
+                    <div class="col-1">Parent<input type="radio" class="form_radio" name="type" id="parent" checked>
                     </div>
+                    <div class="col-1">Guardian<input type="radio" class="form_radio" name="type" id="guardian"></div>
                 </div>
                 <br>
                 <div class="form-row">
@@ -260,17 +269,17 @@
                 <br>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="emergency_Relationship">Relationship</label>
+                        <label>Relationship</label>
                     </div>
-                    <div class="col">
-                        <select id="emergency_Relationship" class="form-control form-control-sm form_select">
-                            <option>son</option>
-                            <option>daughter</option>
-                            <option>ward</option>
-                        </select>
+                    <div class="col-0.5">son<input type="radio" class="form_radio" name="relationship" id="son" checked>
+                    </div>
+                    <div class="col-1">daughter<input type="radio" class="form_radio" name="relationship" id="daughter">
+                    </div>
+                    <div class="col-1">ward<input type="radio" class="form_radio" name="relationship" id="ward">
                     </div>
                 </div>
-                <br>
+            </div>
+            <div class="inner">
                 <div class="form-row">
                     <div class="col-2">
                         <label for="emergency_place_of_work">Place of Work</label>
@@ -332,9 +341,9 @@
                         <span class="option">[optional]</span>
                     </div>
                 </div>
-
             </div>
         </div>
+
         <div class="part">
             <h4>IA Supervisor</h4>
             <div class="error"><i class="fas fa-times"></i>&nbsp;&nbsp;<span class="count">0</span></div>
@@ -406,10 +415,21 @@
                 </div>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="organization_nature">Nature of Business</label>
+                        <label>Nature of Business</label>
+                    </div>
+                    <div class="col-0.5">SME<input type="radio" class="form_radio" name="nature" id="SME" checked>
+                    </div>
+                    <div class="col-1">Non-SME<input type="radio" class="form_radio" name="nature" id="Non-SME">
+                    </div>
+                    <div class="col-1">NGO<input type="radio" class="form_radio" name="nature" id="NGO">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-2">
+                        <label for="registration_certificate">Business Registration Certificate No.</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="organization_nature" required>
+                        <input type="text" class="form-control is-invalid" id="registration_certificate">
                     </div>
                 </div>
 
@@ -637,13 +657,34 @@
                 </div>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="allowance_per_mon">Allowance per month</label>
+                        <label for="allowance_per_mon">Allowance</label>
                     </div>
                     <div class="col-0.5">$</div>
-                    <div class="col-8">
+                    <div class="col-2">
                         <input type="number" class="form-control is-invalid" id="allowance_per_mon" min="0" value="0"
                                required>
                     </div>
+                    <div class="col-1">
+                        <span>per</span>
+                    </div>
+                    <div class="col-1">Hour<input type="radio" class="form_radio" name="11.1" id="11.1.1"></div>
+                    <div class="col-1">Day<input type="radio" class="form_radio" name="11.1" id="11.1.2"></div>
+                    <div class="col-1">Week<input type="radio" class="form_radio" name="11.1" id="11.1.3" checked></div>
+                    <div class="col-1">Month<input type="radio" class="form_radio" name="11.1" id="11.1.4"></div>
+                    <div class="col-1">Scheme<input type="radio" class="form_radio" name="11.1" id="11.1.5"></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-2">
+                        <label for="ia_property">At the end pay of</label>
+                    </div>
+                    <div class="col-1">
+                        <input type="radio" class="form_radio" name="end_pay" id="ppday" checked>day</div>
+                    <div class="col-1">
+                        <input type="radio" class="form_radio" name="end_pay" id="ppweek">week</div>
+                    <div class="col-1 ">
+                        <input type="radio" class="form_radio" name="end_pay" id="ppmonth">month</div>
+                    <div class="col-1 ">
+                        <input type="radio" class="form_radio" name="end_pay" id="ppscheme">scheme</div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
@@ -671,30 +712,18 @@
                     <div class="col-2">
                         <label for="ia_property">IA Property</label>
                     </div>
-
-
                     <input type="text" id="ia_property" style="display: none">
                     <div class="col-2">
                         <input type="radio" name="ia_property" value="regular" checked>on regular
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="ia_property" value="request">on request
+                        <input type="radio" name="ia_property" value="on request">on request
                     </div>
                     <div class="col-2 ">
                         <input type="radio" name="ia_property" value="project basis">on project basis
                     </div>
                 </div>
                 <br>
-                <div class="form-row">
-                    <div class="col-2">
-                        <label for="organization_mentor">Allowance</label>
-                    </div>
-                    <div class="col-1">Hour<input type="radio" class="form_radio" name="11.1" id="11.1.1"></div>
-                    <div class="col-1">Day<input type="radio" class="form_radio" name="11.1" id="11.1.2"></div>
-                    <div class="col-1">Week<input type="radio" class="form_radio" name="11.1" id="11.1.3" checked></div>
-                    <div class="col-1">Month<input type="radio" class="form_radio" name="11.1" id="11.1.4"></div>
-                    <div class="col-1">Scheme<input type="radio" class="form_radio" name="11.1" id="11.1.5"></div>
-                </div>
             </div>
         </div>
         <div class="part">
