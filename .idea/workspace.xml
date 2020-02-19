@@ -4,8 +4,8 @@
     <list default="true" id="4bd50f81-603f-420b-8ba9-78393bc5d359" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/javascript/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/template_document.docx" beforeDir="false" afterPath="$PROJECT_DIR$/web/template_document.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/~$mplate_document.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +26,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1Xyo1B9tHiE0VnxReJk9JHwwM0n" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
@@ -77,11 +81,15 @@
       <option name="presentableId" value="Default" />
       <updated>1567062159083</updated>
       <workItem from="1567062160592" duration="1264000" />
-      <workItem from="1582027478783" duration="6886000" />
+      <workItem from="1582027478783" duration="7638000" />
+      <workItem from="1582106771601" duration="1968000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
