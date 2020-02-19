@@ -269,13 +269,13 @@
                 <br>
                 <div class="form-row">
                     <div class="col-2">
-                        <label>Relationship</label>
+                        <label for="emergency_relationship">relationship</label>
                     </div>
-                    <div class="col-0.5">son<input type="radio" class="form_radio" name="relationship" id="son" checked>
+                    <div class="col">
+                        <input type="text" class="form-control is-invalid" id="emergency_relationship" required>
                     </div>
-                    <div class="col-1">daughter<input type="radio" class="form_radio" name="relationship" id="daughter">
-                    </div>
-                    <div class="col-1">ward<input type="radio" class="form_radio" name="relationship" id="ward">
+                    <div class="col-1.5">
+                        <a class="name_language">son/daughter/ward</a>
                     </div>
                 </div>
             </div>
@@ -302,7 +302,8 @@
                         <label for="emergency_mobile_tel">Mobile Tel</label>
                     </div>
                     <div class="col-8">
-                        <input class="form-control is-invalid" type="tel" id="emergency_mobile_tel" pattern="[0-9]{8}"
+                        <input class="form-control is-invalid" type="tel" id="emergency_mobile_tel"
+                               pattern="[0-9]{8}"
                                required>
                     </div>
                 </div>
@@ -335,7 +336,8 @@
                         <label for="emergency_doctor_tel">Tel</label>
                     </div>
                     <div class="col">
-                        <input class="form-control is-invalid" type="tel" id="emergency_doctor_tel" pattern="[0-9]{8}">
+                        <input class="form-control is-invalid" type="tel" id="emergency_doctor_tel"
+                               pattern="[0-9]{8}">
                     </div>
                     <div class="col-2">
                         <span class="option">[optional]</span>
@@ -388,7 +390,7 @@
             </div>
         </div>
         <div class="part">
-            <h4>IA Company</h4>
+            <h4>IA Company (Organization)</h4>
             <div class="error"><i class="fas fa-times"></i>&nbsp;&nbsp;<span class="count">0</span></div>
             <div class="inner">
                 <h5>Company</h5>
@@ -398,11 +400,11 @@
                     </div>
                     <div class="col-6 col-md-5">
                         <span class="name_language">Chinese</span>
-                        <input type="text" class="form-control is-invalid" id="organization_chinese_name" required>
+                        <input type="text" class="form-control is-invalid" id="organization_chinese_name" >
                     </div>
                     <div class="col-6 col-md-5">
                         <span class="name_language">English</span>
-                        <input type="text" class="form-control is-invalid" id="organization_eng_name" required>
+                        <input type="text" class="form-control is-invalid" id="organization_eng_name" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -410,14 +412,14 @@
                         <label for="organization_address">Address</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="organization_address" required>
+                        <input type="text" class="form-control is-invalid" id="organization_address" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
                         <label>Nature of Business</label>
                     </div>
-                    <div class="col-0.5">SME<input type="radio" class="form_radio" name="nature" id="SME" checked>
+                    <div class="col-0.5">SME<input type="radio" class="form_radio" name="nature" id="SME" >
                     </div>
                     <div class="col-1">Non-SME<input type="radio" class="form_radio" name="nature" id="Non-SME">
                     </div>
@@ -446,7 +448,7 @@
                         <a class="name_language">English</a>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control is-invalid" id="organization_mentor" required><br>
+                        <input type="text" class="form-control is-invalid" id="organization_mentor" ><br>
                     </div>
                 </div>
                 <div class="form-row">
@@ -454,7 +456,7 @@
                         <label for="organization_mentor_post">Mentor Position</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="organization_mentor_post" required>
+                        <input type="text" class="form-control is-invalid" id="organization_mentor_post" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -462,8 +464,9 @@
                         <label for="organization_mentor_tel">Phone</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="organization_mentor_tel" min="10000000"
-                               max="99999999" required>
+                        <input type="number" class="form-control is-invalid" id="organization_mentor_tel"
+                               min="10000000"
+                               max="99999999" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -471,7 +474,8 @@
                         <label for="organization_mentor_fex">Fax</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="organization_mentor_fex" min="10000000"
+                        <input type="number" class="form-control is-invalid" id="organization_mentor_fex"
+                               min="10000000"
                                max="99999999">
                     </div>
                     <div class="col-2">
@@ -483,7 +487,7 @@
                         <label for="organization_mentor_email">Email</label>
                     </div>
                     <div class="col-8">
-                        <input type="email" class="form-control is-invalid" id="organization_mentor_email" required>
+                        <input type="email" class="form-control is-invalid" id="organization_mentor_email" >
                     </div>
                 </div>
 
@@ -493,7 +497,7 @@
                         <label for="job_title">Job Title</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="job_title" required>
+                        <input type="text" class="form-control is-invalid" id="job_title" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -501,7 +505,7 @@
                         <label for="no_of_place">No. of Places</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="no_of_place" value="1" required>
+                        <input type="number" class="form-control is-invalid" id="no_of_place" value="1" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -509,7 +513,7 @@
                         <label for="ia_department">Department</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="ia_department" required>
+                        <input type="text" class="form-control is-invalid" id="ia_department" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -518,7 +522,7 @@
                     </div>
                     <div class="col-8">
                         <input type="text" class="form-control is-invalid" id="job_description" value="Internship"
-                               required>
+                               >
                     </div>
                 </div>
                 <div class="form-row">
@@ -527,7 +531,7 @@
                     </div>
                     <div class="col-8">
                         <input type="text" class="form-control is-invalid" id="skill_requir" value="Programing"
-                               required>
+                               >
                     </div>
                 </div>
 
@@ -574,7 +578,7 @@
                     </div>
                     <div class="col-8">
                         <input type="text" class="form-control is-invalid" id="disc_preferred" value="IT student"
-                               required>
+                               >
                     </div>
                 </div>
                 <div class="form-row">
@@ -582,7 +586,7 @@
                         <label for="other_req">Other Requirements</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" class="form-control is-invalid" id="other_req" value="N/A" required>
+                        <input type="text" class="form-control is-invalid" id="other_req" value="N/A" >
                     </div>
                 </div>
                 <h5>EIA Details</h5>
@@ -592,7 +596,7 @@
                         <label for="start_date">Start Date</label>
                     </div>
                     <div class="col-8">
-                        <input type="date" class="form-control is-invalid" id="start_date" required>
+                        <input type="date" class="form-control is-invalid" id="start_date" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -600,7 +604,7 @@
                         <label for="finish_date">End Date</label>
                     </div>
                     <div class="col-8">
-                        <input type="date" class="form-control is-invalid" id="finish_date" required>
+                        <input type="date" class="form-control is-invalid" id="finish_date" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -608,7 +612,7 @@
                         <label for="hr_per_day">Working Hour per Day</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="hr_per_day" min="1" required>
+                        <input type="number" class="form-control is-invalid" id="hr_per_day" min="1" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -616,8 +620,8 @@
                         <label for="day_per_week">Working Day per Week</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="day_per_week" min="1" max="7" value="0"
-                               required>
+                        <input type="number" class="form-control is-invalid" id="day_per_week" min="1" max="7"
+                                                           >
                     </div>
                 </div>
                 <div class="form-row">
@@ -625,11 +629,12 @@
                         <label for="working_hr_fr">Working Hour</label>
                     </div>
 
-                    <div class="col-2"><input class="form-control is-invalid" type="time" id="working_hr_fr" required>
+                    <div class="col-2"><input class="form-control is-invalid" type="time" id="working_hr_fr"
+                                              >
                     </div>
                     <div class="col-0.5">至</div>
                     <div class="col-2">
-                        <input type="time" class="form-control is-invalid" id="working_hr_to" required>
+                        <input type="time" class="form-control is-invalid" id="working_hr_to" >
                     </div>
 
                 </div>
@@ -639,7 +644,7 @@
                     </div>
                     <div class="col-8">
                         <input type="number" class="form-control is-invalid" id="total_hour" min="90" value="90"
-                               required>
+                               >
                     </div>
                     <div class="col-2">
                         Hour
@@ -661,15 +666,17 @@
                     </div>
                     <div class="col-0.5">$</div>
                     <div class="col-2">
-                        <input type="number" class="form-control is-invalid" id="allowance_per_mon" min="0" value="0"
-                               required>
+                        <input type="number" class="form-control is-invalid" id="allowance_per_mon" min="0"
+                               value="0"
+                               >
                     </div>
                     <div class="col-1">
                         <span>per</span>
                     </div>
-                    <div class="col-1">Hour<input type="radio" class="form_radio" name="11.1" id="11.1.1"></div>
+                    <div class="col-1">Hour<input type="radio" class="form_radio" name="11.1" id="11.1.1" checked></div>
                     <div class="col-1">Day<input type="radio" class="form_radio" name="11.1" id="11.1.2"></div>
-                    <div class="col-1">Week<input type="radio" class="form_radio" name="11.1" id="11.1.3" checked></div>
+                    <div class="col-1">Week<input type="radio" class="form_radio" name="11.1" id="11.1.3" >
+                    </div>
                     <div class="col-1">Month<input type="radio" class="form_radio" name="11.1" id="11.1.4"></div>
                     <div class="col-1">Scheme<input type="radio" class="form_radio" name="11.1" id="11.1.5"></div>
                 </div>
@@ -678,13 +685,17 @@
                         <label for="ia_property">At the end pay of</label>
                     </div>
                     <div class="col-1">
-                        <input type="radio" class="form_radio" name="end_pay" id="ppday" checked>day</div>
+                        <input type="radio" class="form_radio" name="end_pay" id="ppday" >day
+                    </div>
                     <div class="col-1">
-                        <input type="radio" class="form_radio" name="end_pay" id="ppweek">week</div>
+                        <input type="radio" class="form_radio" name="end_pay" id="ppweek" checked>week
+                    </div>
                     <div class="col-1 ">
-                        <input type="radio" class="form_radio" name="end_pay" id="ppmonth">month</div>
+                        <input type="radio" class="form_radio" name="end_pay" id="ppmonth">month
+                    </div>
                     <div class="col-1 ">
-                        <input type="radio" class="form_radio" name="end_pay" id="ppscheme">scheme</div>
+                        <input type="radio" class="form_radio" name="end_pay" id="ppscheme">scheme
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
@@ -705,7 +716,7 @@
                     </div>
                     <div class="col-0.5">$</div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="bonus" min="0" value="0" required>
+                        <input type="number" class="form-control is-invalid" id="bonus" min="0" value="0" >
                     </div>
                 </div>
                 <div class="form-row">
@@ -736,7 +747,8 @@
                         <label for="time_len">Time length</label>
                     </div>
                     <div class="col-8">
-                        <input type="number" class="form-control is-invalid" id="time_len" min="1" value="1" required>
+                        <input type="number" class="form-control is-invalid" id="time_len" min="1" value="1"
+                               required>
                     </div>
                     <div class="col">
                         /Hour
@@ -927,7 +939,7 @@
                     </div>
                 </div>
                 <br>
-                <h5>Attachment Visit</h5>
+                <h5>Comments about student</h5>
                 <div class="form-row">
                     <div class="col-2">Key Skills</div>
                     <div class="col-1">1</div>
@@ -1013,7 +1025,8 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <div class="col-2">Other Specific Skills<br><input type="textarea" class="col-10" id="other_skill">
+                    <div class="col-2">Other Specific Skills<br><input type="textarea" class="col-10"
+                                                                       id="other_skill">
                     </div>
                     <div class="col-1"><input type="radio" class="form_radio" name="2.4" id="2.4.2"></div>
                     <div class="col-1"><input type="radio" class="form_radio" name="2.4" id="2.4.3"></div>
@@ -1097,7 +1110,8 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <div class="col-2">Appropriate use of teamwork (division of responsibilities and cooperation)</div>
+                    <div class="col-2">Appropriate use of teamwork (division of responsibilities and cooperation)
+                    </div>
                     <div class="col-1"><input type="radio" class="form_radio" name="6.1" id="6.1.1"></div>
                     <div class="col-1"><input type="radio" class="form_radio" name="6.1" id="6.1.2"></div>
                     <div class="col-1"><input type="radio" class="form_radio" name="6.1" id="6.1.3"></div>
@@ -1554,7 +1568,8 @@
                         <input type="radio" class="form_radio" name="9.4" id="9.4.2">
                     </div>
                     <div class="col-8">
-                        Not in this period of time due to staffing/budgetary constraint. But, will highly recommend the
+                        Not in this period of time due to staffing/budgetary constraint. But, will highly recommend
+                        the
                         student to enter the relevant profession/industry immediately after graduation.
                     </div>
                 </div>

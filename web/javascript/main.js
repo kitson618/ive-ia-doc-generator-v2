@@ -4,7 +4,7 @@ const today = new Date();
 const dd = today.getDate();
 const mm = today.getMonth() + 1; //January is 0!
 const yyyy = today.getFullYear();
-const today_str = mm + '/' + dd + '/' + yyyy;
+const today_str = dd + '/' + mm + '/' + yyyy;
 
 window.onload = () => {
     document.getElementById('first_year').value = yyyy - 1;
