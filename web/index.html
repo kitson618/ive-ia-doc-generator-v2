@@ -26,7 +26,7 @@
     <div class="part">
         <h4>Instruction</h4>
         <div class="inner">
-<div class="warning">[ ! Important ! ]</div>
+            <div class="warning">[ ! Important ! ]</div>
             1. Fill in this form<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or<br>
             &nbsp;&nbsp;&nbsp;Load existing json from below (If you have)<br><br>
@@ -345,15 +345,16 @@
             <h4>IA Supervisor</h4>
             <div class="error"><i class="fas fa-times"></i>&nbsp;&nbsp;<span class="count">0</span></div>
             <div class="inner">
+
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="supervisor_name">Name</label>
+                        <label>Name</label>
                     </div>
-                    <div class="col-1.5">
-                        <a class="name_language">English</a>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control is-invalid" id="supervisor_name" required>
+                    <div class="col-4">
+                        <select class="form-control is-invalid form_selectbox" id="supervisor_name">
+                            <option value="Kitson Cheung">Kitson Cheung</option>
+                            <option value="Carmen Wong">Carmen Wong</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-row">

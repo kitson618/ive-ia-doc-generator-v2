@@ -64,6 +64,7 @@ function saveAsJson() {
     getCheckbox();
     getRadio();
     getTextarea();
+    getSelectbox();
     let blob = new Blob([JSON.stringify(prepareJson)], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "data.json");
 }
@@ -73,6 +74,7 @@ function generateFile() {
     getCheckbox();
     getRadio();
     getTextarea();
+    getSelectbox();
     loadFile("template_document.docx", function (error, content) {
         if (error) {
             throw error
@@ -121,6 +123,17 @@ function getCheckbox() {
         prepareJson[inputs[r].getAttribute('id')] = form_value;
     }
 }
+
+function getSelectbox() {
+    let inputs = document.getElementsByClassName('form_selectbox');
+    var r;
+    for (r = 0; r < inputs.length; r++) {
+        let form_value = '';
+        form_value = [inputs[r].value];
+        prepareJson[inputs[r].getAttribute('id')] = form_value;
+    }
+}
+
 
 function getTextarea() {
     let inputs = document.getElementsByClassName('form_textarea');
