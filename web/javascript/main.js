@@ -86,8 +86,7 @@ function generateFile() {
         try {
             // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
             doc.render()
-        }
-        catch (error) {
+        } catch (error) {
             let e = {
                 message: error.message,
                 name: error.name,
@@ -125,13 +124,10 @@ function getCheckbox() {
 }
 
 function getSelectbox() {
-    let inputs = document.getElementsByClassName('form_selectbox');
-    var r;
-    for (r = 0; r < inputs.length; r++) {
-        let form_value = '';
-        form_value = [inputs[r].value];
-        prepareJson[inputs[r].getAttribute('id')] = form_value;
-    }
+    let inputs = document.getElementById("supervisor_name");
+    let form_value = '';
+    form_value = [inputs.options[inputs.selectedIndex].text];
+    prepareJson[inputs.options[inputs.selectedIndex].value] = form_value;
 }
 
 
