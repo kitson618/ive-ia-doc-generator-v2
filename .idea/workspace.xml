@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/javascript/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/template_document.docx" beforeDir="false" afterPath="$PROJECT_DIR$/web/template_document.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,10 @@
       <workItem from="1582113831367" duration="1275000" />
       <workItem from="1585195507424" duration="4923000" />
       <workItem from="1585293856246" duration="755000" />
-      <workItem from="1585453487856" duration="2554000" />
+      <workItem from="1585453487856" duration="2916000" />
+      <workItem from="1585464328432" duration="1503000" />
+      <workItem from="1586013992282" duration="7000" />
+      <workItem from="1587565229014" duration="571000" />
     </task>
     <servers />
   </component>
@@ -161,5 +163,9 @@
     </state>
     <state width="1572" height="167" key="GridCell.Tab.2.right/0.0.1280.720/195.-900.1600.900@0.0.1280.720" timestamp="1585234508110" />
     <state width="1572" height="167" key="GridCell.Tab.2.right/0.0.1280.720/195.-900.1600.900@195.-900.1600.900" timestamp="1585197959590" />
+    <state x="658" y="-710" width="672" height="678" key="search.everywhere.popup" timestamp="1585456251141">
+      <screen x="195" y="-900" width="1600" height="900" />
+    </state>
+    <state x="658" y="-710" width="672" height="678" key="search.everywhere.popup/0.0.1280.720/195.-900.1600.900@195.-900.1600.900" timestamp="1585456251141" />
   </component>
 </project>

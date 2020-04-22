@@ -126,8 +126,8 @@ function getCheckbox() {
 function getSelectbox() {
     let inputs = document.getElementById("supervisor_name");
     let form_value = '';
-    form_value = [inputs.options[inputs.selectedIndex].text];
-    prepareJson[inputs.options[inputs.selectedIndex].value] = form_value;
+    form_value = [inputs.options[inputs.selectedIndex].value];
+    prepareJson[inputs.getAttribute('id')] = form_value;
 }
 
 
