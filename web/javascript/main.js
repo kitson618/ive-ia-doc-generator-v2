@@ -75,17 +75,66 @@ function generateFile() {
     getRadio();
     getTextarea();
     getSelectbox();
+    getImage();
     loadFile("template_document.docx", function (error, content) {
         if (error) {
             throw error
         }
+        var opts = {};
+        opts.centered = false;
+        opts.getImage = function (tagValue, tagName) {
+            return new Promise(function (resolve, reject) {
+                JSZipUtils.getBinaryContent(tagValue, function (error, content) {
+                    if (error) {
+                        return reject(error);
+                    }
+                    return resolve(content);
+                });
+            });
+        };
+
+        opts.getSize = function (img, tagValue, tagName) {
+            // FOR FIXED SIZE IMAGE :
+            return [168, 81];
+
+            // FOR IMAGE COMING FROM A URL (IF TAGVALUE IS AN ADRESS) :
+            // To use this feature, you have to be using docxtemplater async
+            // (if you are calling setData(), you are not using async).
+            return new Promise(function (resolve, reject) {
+                var image = new Image();
+                image.src = url;
+                image.onload = function () {
+                    resolve([image.width, image.height]);
+                };
+                image.onerror = function (e) {
+                    console.log("img, tagValue, tagName : ", img, tagValue, tagName);
+                    alert("An error occured while loading " + tagValue);
+                    reject(e);
+                };
+            });
+        };
+        var imageModule = new ImageModule(opts);
         let zip = new JSZip(content);
-        let doc = new Docxtemplater().loadZip(zip);
-        doc.setData(prepareJson);
+        let doc = new Docxtemplater().loadZip(zip).attachModule(imageModule).compile();
+
 
         try {
             // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
-            doc.render()
+
+            doc
+                .resolveData(prepareJson)
+                .then(function () {
+                    console.log("ready");
+                    doc.render();
+                    var out = doc.getZip().generate({
+                        type: "blob",
+                        mimeType:
+                            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    });
+                    saveAs(out, "generated.docx");
+                });
+
+
         } catch (error) {
             let e = {
                 message: error.message,
@@ -97,16 +146,24 @@ function generateFile() {
             // The error thrown here contains additional information when logged with JSON.stringify (it contains a property object).
             throw error;
         }
-        let out = doc.getZip().generate({
-            type: "blob",
-            mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        }); //Output the document using Data-URI
-        saveAs(out, "output.docx")
+        // let out = doc.getZip().generate({
+        //     type: "blob",
+        //     mimeType:
+        //         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        // });
+        // saveAs(out, "generated.docx");
     });
 }
 
 function loadFile(url, callback) {
     JSZipUtils.getBinaryContent(url, callback);
+}
+
+function getImage() {
+    let inputs = document.getElementById("supervisor_name");
+    let sign = "";
+    sign = [inputs.options[inputs.selectedIndex].value];
+    prepareJson["image"] = "../web/sign/"+sign+".png";
 }
 
 function getCheckbox() {
@@ -126,7 +183,7 @@ function getCheckbox() {
 function getSelectbox() {
     let inputs = document.getElementById("supervisor_name");
     let form_value = '';
-    form_value = [inputs.options[inputs.selectedIndex].value];
+    form_value = [inputs.options[inputs.selectedIndex].text];
     prepareJson[inputs.getAttribute('id')] = form_value;
 }
 

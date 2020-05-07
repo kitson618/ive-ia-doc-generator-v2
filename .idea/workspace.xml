@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/javascript/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/template_document.docx" beforeDir="false" afterPath="$PROJECT_DIR$/web/template_document.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +44,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kcwan\PycharmProjects\ive-ia-doc-generator-v2\web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kcwan\PycharmProjects\ive-ia-doc-generator-v2\web\sign" />
+      <recent name="C:\Users\kcwan\PycharmProjects\ive-ia-doc-generator-v2\web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kcwan\PycharmProjects\ive-ia-doc-generator-v2\web" />
     </key>
   </component>
@@ -163,6 +164,10 @@
     </state>
     <state width="1572" height="167" key="GridCell.Tab.2.right/0.0.1280.720/195.-900.1600.900@0.0.1280.720" timestamp="1585234508110" />
     <state width="1572" height="167" key="GridCell.Tab.2.right/0.0.1280.720/195.-900.1600.900@195.-900.1600.900" timestamp="1585197959590" />
+    <state x="2479" y="281" key="RollbackChangesDialog" timestamp="1588857557351">
+      <screen x="1920" y="118" width="1600" height="900" />
+    </state>
+    <state x="2479" y="281" key="RollbackChangesDialog/0.0.1280.720/1920.118.1600.900@1920.118.1600.900" timestamp="1588857557351" />
     <state x="658" y="-710" width="672" height="678" key="search.everywhere.popup" timestamp="1585456251141">
       <screen x="195" y="-900" width="1600" height="900" />
     </state>
