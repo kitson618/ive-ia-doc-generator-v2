@@ -352,7 +352,7 @@
                         <label>Name</label>
                     </div>
                     <div class="col-4">
-                        <select class="form-control is-invalid form_selectbox" id="supervisor_name">
+                        <select class="form-control is-invalid form_selectbox" id="supervisor_name" required>
                             <option value="Kitson_Cheung" selected="selected">Kitson Cheung</option>
                             <option value="Carmen_Wong">Carmen Wong</option>
                             <option value="Cyrus_Wong">Cyrus Wong</option>
@@ -538,39 +538,24 @@
                 <h5>Language Requirement</h5>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="chi_req">Chinese</label>
+                        <label for="ia_property">Chinese</label>
                     </div>
-                    <input type="text" id="chi_req" style="display: none">
-                    <div class="col-2">
-                        <input type="radio" name="chi_req" value="0" checked>Fair
-                    </div>
-                    <div class="col-2">
-                        <input type="radio" name="chi_req" value="1">Fluent
-                    </div>
+                     <div class="col-1">Fair<input type="radio" class="form_radio" name="chfair" id="13.1.1" checked></div>
+                    <div class="col-1">Fluent<input type="radio" class="form_radio" name="chfair" id="13.1.2"></div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="eng_req">English</label>
+                        <label for="ia_property">English</label>
                     </div>
-                    <input type="text" id="eng_req" style="display: none">
-                    <div class="col-2">
-                        <input type="radio" name="eng_req" value="0" checked>Fair
-                    </div>
-                    <div class="col-2">
-                        <input type="radio" name="eng_req" value="1">Fluent
-                    </div>
+                    <div class="col-1">Fair<input type="radio" class="form_radio" name="engfair" id="13.2.1" checked></div>
+                    <div class="col-1">Fluent<input type="radio" class="form_radio" name="engfair" id="13.2.2"></div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
-                        <label for="put_req">Putonghua</label>
+                        <label for="ia_property">Putonghua</label>
                     </div>
-                    <input type="text" id="put_req" style="display: none">
-                    <div class="col-2">
-                        <input type="radio" name="put_req" value="0" checked>Fair
-                    </div>
-                    <div class="col-2">
-                        <input type="radio" name="put_req" value="1">Fluent
-                    </div>
+                     <div class="col-1">Fair<input type="radio" class="form_radio" name="qutfair" id="13.3.1" checked></div>
+                    <div class="col-1">Fluent<input type="radio" class="form_radio" name="qutfair" id="13.3.2"></div>
                 </div>
                 <div class="form-row">
                     <div class="col-2">
@@ -731,7 +716,7 @@
                         <input type="radio" name="ia_property" value="on request">on request
                     </div>
                     <div class="col-2 ">
-                        <input type="radio" name="ia_property" value="project basis">on project basis
+                        <input type="radio" name="ia_property" value="on project basis">on project basis
                     </div>
                 </div>
                 <br>

@@ -221,27 +221,7 @@ function getData() {
                 form_value = document.querySelector('[name=mentor_gender]:checked').value + " " + inputs[i].value;
                 break;
 
-            case "chi_req":
-                if (document.querySelector('[name=chi_req]:checked').value === "0") {
-                    form_value = ["Fair"]
-                } else {
-                    form_value = []
-                }
-                break;
-            case "eng_req":
-                if (document.querySelector('[name=eng_req]:checked').value === "0") {
-                    form_value = ["Fair"]
-                } else {
-                    form_value = []
-                }
-                break;
-            case "put_req":
-                if (document.querySelector('[name=put_req]:checked').value === "0") {
-                    form_value = ["Fair"]
-                } else {
-                    form_value = []
-                }
-                break;
+
             case "shift_duty":
                 form_value = document.querySelector('[name=shift_duty]:checked').value;
                 break;
@@ -289,27 +269,7 @@ function loadJSON() {
                         }
                         document.getElementById(key).value = p_text[1];
                         break;
-                    case "chi_req":
-                        if (prepareJson[key].length === 0) {
-                            document.getElementsByName(key)[1].checked = true;
-                        } else {
-                            document.getElementsByName(key)[0].checked = true;
-                        }
-                        break;
-                    case "eng_req":
-                        if (prepareJson[key].length === 0) {
-                            document.getElementsByName(key)[1].checked = true;
-                        } else {
-                            document.getElementsByName(key)[0].checked = true;
-                        }
-                        break;
-                    case "put_req":
-                        if (prepareJson[key].length === 0) {
-                            document.getElementsByName(key)[1].checked = true;
-                        } else {
-                            document.getElementsByName(key)[0].checked = true;
-                        }
-                        break;
+
                     case "shift_duty":
                         if (prepareJson[key] === "No") {
                             document.getElementsByName(key)[1].checked = true;
