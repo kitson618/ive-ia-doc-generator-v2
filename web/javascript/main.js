@@ -95,7 +95,7 @@ function generateFile() {
 
         opts.getSize = function (img, tagValue, tagName) {
             // FOR FIXED SIZE IMAGE :
-            return [168, 81];
+            return [160, 77];
 
             // FOR IMAGE COMING FROM A URL (IF TAGVALUE IS AN ADRESS) :
             // To use this feature, you have to be using docxtemplater async

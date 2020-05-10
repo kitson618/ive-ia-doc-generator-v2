@@ -27,4 +27,13 @@ open run.bat with admin right
 
 LOL if chrome.exe not found (Install chrome and try again)
 
+---------------------------------------------------------
+<b>Change Academic Supervisor Signature</b>
 
+page of the signature in template: p16, p26
+
+1. Make sure you have the png file in ./sign folder
+2. In index.html find out part of signature and change those options for you want.
+   Be careful, the value of those options must be same as the png files.
+   For example, if your png file was named example.png, the value of option should be example.
+3. If you want to change the size of signature, ./javascript/main.js the function getSize can help you.
